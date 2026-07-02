@@ -50,13 +50,75 @@
 
       <div>
         <h2>Problema</h2>
-        <p>Antes desse projeto, o cliente não tinha nenhuma visibilidade operacional sobre o próprio pedido. Para saber onde estavam os dispositivos, qual base ia recebê-los, quando chegariam para poder agendar a instalação, ou quais itens do pedido já tinham sido instalados, o único caminho era abrir um ticket com atendimento ou CS. Cada uma dessas perguntas gerava um contato reativo, sobrecarregando o time de suporte com informação que já existia internamente — só não estava traduzida para o cliente.</p>
+        <p>Antes desse projeto, o cliente não tinha nenhuma visibilidade operacional sobre o próprio pedido. Para saber onde estavam os dispositivos, qual base ia recebê-los, quando chegariam para poder agendar a instalação, ou quais itens do pedido já tinham sido instalados, o único caminho era abrir um ticket com atendimento ou CS. Isso não era só um incômodo: sem essa visibilidade, o gestor da frota não conseguia planejar quando parar os veículos para a instalação, nem organizar a operação no dia combinado, nem acompanhar o que tinha ficado pendente para as próximas etapas do onboarding. Cada uma dessas perguntas gerava um contato reativo, sobrecarregando o time de suporte com informação que já existia internamente e nunca tinha sido traduzida para o cliente.</p>
       </div>
 
       <div>
         <h2>Processo</h2>
         <p>Levei essa dor para o time como uma iniciativa formal, junto com uma designer estagiária que estava no período inicial dela no time. Começamos mapeando, num board colaborativo, o fluxo ponta a ponta de onboarding e instalação e todos os pontos onde o cliente perdia visibilidade — desde o pedido do dispositivo até a instalação concluída.</p>
-        <p>O diagnóstico confirmou o que a pesquisa da Basic Value já indicava: a maior fonte de atrito não era a instalação em si, mas a tradução entre o que a operação enxergava internamente — tickets e status no Hubspot — e o que o cliente conseguia entender sozinho, sem precisar perguntar.</p>
+        <p>O diagnóstico apontou quatro causas específicas para a falta de clareza: a data de agendamento marcada ficava escondida dentro do fluxo, enquanto a data de chegada dos dispositivos — menos relevante pro cliente naquele momento — tinha mais destaque na tela; cada etapa do processo (envio, instalação, devolução) vivia em um ticket interno separado, sem conexão visível entre elas; o painel do cliente não tinha um processo com início, meio e fim, e cada etapa aparecia quebrada em abas diferentes; e, na base de tudo isso, o cliente continuava dependente do CSM para traduzir esses tickets internos em informação que fizesse sentido pra ele.</p>
+
+        <figure class="stat-chart">
+          <span class="mono">Fluxo do pedido · onde o cliente dependia do CS</span>
+          <svg viewBox="0 0 900 280" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Diagrama do fluxo do pedido em quatro etapas — pedido realizado, envio dos dispositivos, agendamento e instalação — mostrando que em cada uma das três últimas etapas o cliente precisava contatar o CS por falta de visibilidade.">
+            <defs>
+              <marker id="pedidosArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/>
+              </marker>
+            </defs>
+
+            <rect x="340" y="14" width="220" height="42" rx="21" fill="var(--paper)" stroke="var(--accent-warm)" stroke-width="1.5"/>
+            <text x="450" y="40" text-anchor="middle" font-family="var(--font-mono)" font-size="13" fill="var(--accent-warm)">cliente liga pro CS</text>
+
+            <g stroke="var(--ink-soft)" stroke-width="1.2" stroke-dasharray="3 4">
+              <line x1="450" y1="56" x2="340" y2="110"/>
+              <line x1="450" y1="56" x2="560" y2="110"/>
+              <line x1="450" y1="56" x2="780" y2="110"/>
+            </g>
+
+            <g font-family="var(--font-display)" font-weight="600" font-size="14" fill="var(--ink)" text-anchor="middle">
+              <rect x="30" y="110" width="180" height="60" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+              <text x="120" y="145">Pedido realizado</text>
+
+              <rect x="250" y="110" width="180" height="60" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+              <text x="340" y="137">Envio dos</text>
+              <text x="340" y="155">dispositivos</text>
+
+              <rect x="470" y="110" width="180" height="60" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+              <text x="560" y="145">Agendamento</text>
+
+              <rect x="690" y="110" width="180" height="60" rx="10" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+              <text x="780" y="145">Instalação</text>
+            </g>
+
+            <g stroke="var(--accent)" stroke-width="2" marker-end="url(#pedidosArrow)">
+              <line x1="212" y1="140" x2="248" y2="140"/>
+              <line x1="432" y1="140" x2="468" y2="140"/>
+              <line x1="652" y1="140" x2="688" y2="140"/>
+            </g>
+
+            <g stroke="var(--ink-soft)" stroke-width="1.2" stroke-dasharray="3 4">
+              <line x1="340" y1="170" x2="340" y2="190"/>
+              <line x1="560" y1="170" x2="560" y2="190"/>
+              <line x1="780" y1="170" x2="780" y2="190"/>
+            </g>
+
+            <g font-family="var(--font-mono)" font-size="12" fill="var(--accent-warm)" text-anchor="middle">
+              <rect x="250" y="190" width="180" height="70" rx="8" fill="var(--paper)" stroke="var(--line)"/>
+              <text x="340" y="218">só o CS sabia a</text>
+              <text x="340" y="234">previsão real de chegada</text>
+
+              <rect x="470" y="190" width="180" height="70" rx="8" fill="var(--paper)" stroke="var(--line)"/>
+              <text x="560" y="218">a data ficava escondida</text>
+              <text x="560" y="234">num ticket à parte</text>
+
+              <rect x="690" y="190" width="180" height="70" rx="8" fill="var(--paper)" stroke="var(--line)"/>
+              <text x="780" y="218">cliente não sabia o que</text>
+              <text x="780" y="234">já tinha sido instalado</text>
+            </g>
+          </svg>
+          <figcaption>Mapeamento do fluxo de onboarding-instalação: em três das quatro etapas do pedido, a falta de visibilidade só era resolvida com um contato reativo ao CS.</figcaption>
+        </figure>
       </div>
 
       <div>
@@ -82,7 +144,7 @@
 
       <div>
         <h2>Resultado</h2>
-        <p>Nos meses seguintes ao lançamento, o acesso ao fluxo de pedidos e agendamento cresceu 19%, e 40% dos agendamentos passaram a ser feitos diretamente pelo painel, sem passar por atendimento. Isso desonerou o time de CS de um volume relevante de contatos reativos que existiam só porque a informação já existia internamente e nunca tinha sido traduzida para o cliente.</p>
+        <p>Antes do lançamento, estabelecemos a meta de 20% de adoção do novo fluxo de pedidos e agendamento nos primeiros três meses. Batemos 19% — muito próximo da meta — e, junto disso, 40% dos agendamentos passaram a ser feitos diretamente pelo painel, sem passar por atendimento. Isso desonerou o time de CS de um volume relevante de contatos reativos que existiam só porque a informação já existia internamente e nunca tinha sido traduzida para o cliente.</p>
         <p>O aprendizado mais claro deste projeto foi que boa parte da carga de atendimento não vem de problemas reais no produto, mas de informação que já existe internamente e nunca foi traduzida para quem precisa dela. Tornar essa tradução visível — e não a resposta de um atendente — é o que de fato reduz o atrito e a dependência de suporte.</p>
       </div>
     </section>
