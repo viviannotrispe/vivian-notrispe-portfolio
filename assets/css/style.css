@@ -456,6 +456,18 @@ h1, h2, h3 {
   font-size: 0.85rem;
 }
 
+/* Versão mais larga do .stat-chart, para diagramas que precisam de mais espaço
+   do que a coluna de leitura de 720px permite. Sem efeito abaixo de 1000px de
+   viewport, onde a coluna já ocupa a largura disponível. */
+@media (min-width: 1000px) {
+  .stat-chart--wide {
+    width: calc(100% + 240px);
+    max-width: 960px;
+    margin-left: -120px;
+    margin-right: -120px;
+  }
+}
+
 .stat-chart img {
   width: 100%;
   height: auto;

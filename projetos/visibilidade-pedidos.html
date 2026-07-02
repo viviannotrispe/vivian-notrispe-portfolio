@@ -37,7 +37,83 @@
       </dl>
 
       <div class="case-cover">
-        <img src="../assets/img/pedidos-timeline.jpg" alt="Tela do produto mostrando a linha do tempo de status de um pedido, da compra ao envio e instalação dos dispositivos.">
+        <svg viewBox="0 0 960 540" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Ilustração combinando o fluxo do pedido — pedido realizado, envio, agendamento e instalação — com uma versão simplificada da página de pedidos, mostrando o resumo por tipo de pedido e a tabela de status.">
+          <defs>
+            <marker id="pedidosCoverArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/>
+            </marker>
+          </defs>
+
+          <text x="60" y="66" font-family="var(--font-mono)" font-size="15" letter-spacing="1" fill="var(--ink-soft)">FLUXO DO PEDIDO → VISIBILIDADE NO PAINEL</text>
+
+          <g font-family="var(--font-display)" font-weight="600" font-size="14">
+            <rect x="60" y="100" width="170" height="50" rx="25" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+            <text x="145" y="130" text-anchor="middle" fill="var(--ink)">Pedido</text>
+
+            <rect x="260" y="100" width="170" height="50" rx="25" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+            <text x="345" y="130" text-anchor="middle" fill="var(--ink)">Envio</text>
+
+            <rect x="460" y="100" width="170" height="50" rx="25" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+            <text x="545" y="130" text-anchor="middle" fill="var(--ink)">Agendamento</text>
+
+            <rect x="660" y="100" width="170" height="50" rx="25" fill="var(--accent)"/>
+            <text x="745" y="130" text-anchor="middle" fill="var(--paper)">Instalação</text>
+          </g>
+
+          <g stroke="var(--accent)" stroke-width="2" marker-end="url(#pedidosCoverArrow)">
+            <line x1="232" y1="125" x2="258" y2="125"/>
+            <line x1="432" y1="125" x2="458" y2="125"/>
+            <line x1="632" y1="125" x2="658" y2="125"/>
+          </g>
+
+          <rect x="60" y="190" width="840" height="310" rx="16" fill="var(--paper)" stroke="var(--line-strong)"/>
+
+          <circle cx="92" cy="228" r="5" fill="var(--line-strong)"/>
+          <circle cx="112" cy="228" r="5" fill="var(--line-strong)"/>
+          <circle cx="132" cy="228" r="5" fill="var(--line-strong)"/>
+          <text x="160" y="234" font-family="var(--font-display)" font-weight="600" font-size="20" fill="var(--ink)">Pedidos</text>
+          <line x1="90" y1="250" x2="870" y2="250" stroke="var(--line)"/>
+
+          <g>
+            <rect x="90" y="270" width="240" height="50" rx="10" fill="var(--paper-2)" stroke="var(--line)"/>
+            <rect x="108" y="286" width="8" height="18" rx="2" fill="var(--accent)"/>
+            <text x="128" y="301" font-family="var(--font-mono)" font-size="15" fill="var(--ink)">40 <tspan fill="var(--ink-soft)" font-size="12">Compras</tspan></text>
+
+            <rect x="350" y="270" width="240" height="50" rx="10" fill="var(--paper-2)" stroke="var(--line)"/>
+            <rect x="368" y="286" width="8" height="18" rx="2" fill="var(--accent-warm)"/>
+            <text x="388" y="301" font-family="var(--font-mono)" font-size="15" fill="var(--ink)">6 <tspan fill="var(--ink-soft)" font-size="12">Trocas</tspan></text>
+
+            <rect x="610" y="270" width="240" height="50" rx="10" fill="var(--paper-2)" stroke="var(--line)"/>
+            <rect x="628" y="286" width="8" height="18" rx="2" fill="var(--ink-soft)"/>
+            <text x="648" y="301" font-family="var(--font-mono)" font-size="15" fill="var(--ink)">5 <tspan fill="var(--ink-soft)" font-size="12">Devoluções</tspan></text>
+          </g>
+
+          <g fill="var(--line)">
+            <rect x="90" y="345" width="90" height="14" rx="7"/>
+            <rect x="320" y="345" width="130" height="14" rx="7"/>
+            <rect x="470" y="345" width="90" height="14" rx="7"/>
+            <rect x="740" y="345" width="130" height="14" rx="7"/>
+          </g>
+          <rect x="190" y="345" width="110" height="14" rx="7" fill="var(--accent)" opacity="0.85"/>
+
+          <g fill="var(--line)">
+            <rect x="90" y="385" width="90" height="14" rx="7"/>
+            <rect x="320" y="385" width="150" height="14" rx="7"/>
+            <rect x="740" y="385" width="130" height="14" rx="7"/>
+          </g>
+          <rect x="190" y="385" width="110" height="14" rx="7" fill="var(--accent-warm)" opacity="0.85"/>
+          <rect x="490" y="385" width="90" height="14" rx="7" fill="var(--line-strong)"/>
+
+          <g fill="var(--line)">
+            <rect x="90" y="425" width="90" height="14" rx="7"/>
+            <rect x="320" y="425" width="130" height="14" rx="7"/>
+            <rect x="470" y="425" width="90" height="14" rx="7"/>
+            <rect x="740" y="425" width="130" height="14" rx="7"/>
+          </g>
+          <rect x="190" y="425" width="110" height="14" rx="7" fill="var(--accent)" opacity="0.85"/>
+
+          <line x1="90" y1="465" x2="870" y2="465" stroke="var(--line)"/>
+        </svg>
       </div>
     </section>
 
@@ -58,7 +134,7 @@
         <p>Levei essa dor para o time como uma iniciativa formal, junto com uma designer estagiária que estava no período inicial dela no time. Começamos mapeando, num board colaborativo, o fluxo ponta a ponta de onboarding e instalação e todos os pontos onde o cliente perdia visibilidade — desde o pedido do dispositivo até a instalação concluída.</p>
         <p>O diagnóstico apontou quatro causas específicas para a falta de clareza: a data de agendamento marcada ficava escondida dentro do fluxo, enquanto a data de chegada dos dispositivos — menos relevante pro cliente naquele momento — tinha mais destaque na tela; cada etapa do processo (envio, instalação, devolução) vivia em um ticket interno separado, sem conexão visível entre elas; o painel do cliente não tinha um processo com início, meio e fim, e cada etapa aparecia quebrada em abas diferentes; e, na base de tudo isso, o cliente continuava dependente do CSM para traduzir esses tickets internos em informação que fizesse sentido pra ele.</p>
 
-        <figure class="stat-chart">
+        <figure class="stat-chart stat-chart--wide">
           <span class="mono">Fluxo do pedido · onde o cliente dependia do CS</span>
           <svg viewBox="0 0 900 280" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Diagrama do fluxo do pedido em quatro etapas — pedido realizado, envio dos dispositivos, agendamento e instalação — mostrando que em cada uma das três últimas etapas o cliente precisava contatar o CS por falta de visibilidade.">
             <defs>
@@ -123,7 +199,15 @@
 
       <div>
         <h2>Solução</h2>
-        <p>A entrega central foi uma linha do tempo detalhada de status do pedido, dentro da própria página de pedidos do produto — traduzindo os status internos da operação para uma nomenclatura simples que o cliente consegue seguir sozinho: pedido realizado, envio dos dispositivos, instalação. Cada etapa mostra endereço, previsão de chegada e datas de agendamento propostas, sem que o cliente precise abrir um ticket para descobrir isso.</p>
+        <p>A entrega central foi uma nova página de pedidos, reunindo em um só lugar as compras, trocas e devoluções de dispositivos — hoje espalhadas em tickets internos separados — junto com um resumo rápido de quantos pedidos estão em cada situação e uma recomendação de agendamento sempre que houver instalação pendente.</p>
+
+        <figure class="stat-chart">
+          <span class="mono">Página de pedidos · visão geral</span>
+          <img src="../assets/img/pedidos-visao-geral.jpg" alt="Tela da página de pedidos mostrando os cards de resumo de compras, trocas e devoluções, a tabela de pedidos com etapa, data de agendamento e prazo limite, e uma recomendação para agendar instalação.">
+          <figcaption>Visão geral da página de pedidos, com o resumo por tipo de pedido e uma recomendação automática para agendar instalações pendentes.</figcaption>
+        </figure>
+
+        <p>A partir dessa visão geral, cada pedido abre em uma linha do tempo detalhada de status — traduzindo os status internos da operação para uma nomenclatura simples que o cliente consegue seguir sozinho: pedido realizado, envio dos dispositivos, instalação. Cada etapa mostra endereço, previsão de chegada e datas de agendamento propostas, sem que o cliente precise abrir um ticket para descobrir isso.</p>
 
         <figure class="stat-chart">
           <span class="mono">Página de pedidos · linha do tempo de status</span>
